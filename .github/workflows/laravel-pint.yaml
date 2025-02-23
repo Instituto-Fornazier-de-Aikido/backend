@@ -1,10 +1,15 @@
-name: PHP Insights CI GitHub Action
+name: Laravel Pint CI GitHub Action
 
-on: [push, pull_request]
+on: [ pull_request, push ]
 
 jobs:
-  phpinsights:
+  pint:
     runs-on: ubuntu-latest
     steps:
-      - name: Run PHP Insights
-        run: php artisan insights --no-interaction --min-quality=70 --min-complexity=80 --min-architecture=75 --min-style=95
+
+      - name: Run Laravel Pint
+        uses: aglipanci/laravel-pint-action@0.1.0
+        with:
+          preset: laravel
+          verboseMode: true
+          testMode: true
