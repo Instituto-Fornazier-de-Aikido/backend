@@ -3,6 +3,6 @@
 declare(strict_types=1);
 
 return [
-    App\Infrastructure\Providers\AppServiceProvider::class,
-    App\Modules\_Common\Infrastructure\CommonServiceProvider::class,
+    App\Providers\AppServiceProvider::class,
+    App\Core\_Common\Infrastructure\CommonServiceProvider::class,
 ];
