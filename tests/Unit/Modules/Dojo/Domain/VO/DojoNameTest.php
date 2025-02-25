@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Tests\Unit\Modules\Dojo\Domain\VO;
+namespace Tests\Unit\Core\Dojo\Domain\VO;
 
-use App\Modules\Dojo\Domain\VO\DojoName;
+use App\Core\Dojo\Domain\VO\DojoName;
 use PHPUnit\Framework\Attributes\Test;
 use PHPUnit\Framework\TestCase;
 

@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Tests\Unit\Modules\Dojo\Domain;
+namespace Tests\Unit\Core\Dojo\Domain;
 
-use App\Modules\_Common\Domain\VO\UuidV4;
-use App\Modules\Dojo\Domain\Address;
-use App\Modules\Dojo\Domain\Dojo;
-use App\Modules\Dojo\Domain\VO\DojoName;
+use App\Core\_Common\Domain\VO\UuidV4;
+use App\Core\Dojo\Domain\Address;
+use App\Core\Dojo\Domain\Dojo;
+use App\Core\Dojo\Domain\VO\DojoName;
 use Faker\Factory;
 use Iterator;
 use PHPUnit\Framework\Attributes\DataProvider;

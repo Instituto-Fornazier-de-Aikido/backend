@@ -4,33 +4,25 @@ declare(strict_types=1);
 
 namespace App\Core\Dojo\Infrastructure\Resources;
 
-use App\Core\Dojo\Infrastructure\Model\Dojo;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
 
-/** @mixin Dojo */
+/** @mixin \App\Core\Dojo\Domain\Dojo */
 class DojoResource extends JsonResource
 {
     public function toArray(Request $request): array
     {
-        $this->additional([
-            'timestamps' => [
-                'created_at' => $this->created_at,
-                'updated_at' => $this->updated_at,
-            ],
-        ]);
-
         return [
-            'uuid' => $this->uuid,
-            'name' => $this->name,
+            'uuid' => $this->getId(),
+            'name' => $this->getName(),
             'address' => [
-                'street' => $this->street,
-                'number' => $this->number,
-                'neighborhood' => $this->neighborhood,
-                'city' => $this->city,
-                'state' => $this->state,
-                'zipCode' => $this->zipCode,
-                'complement' => $this->complement,
+                'street' => $this->getAddress()->getStreet(),
+                'number' => $this->getAddress()->getNumber(),
+                'neighborhood' => $this->getAddress()->getNeighborhood(),
+                'city' => $this->getAddress()->getCity(),
+                'state' => $this->getAddress()->getState(),
+                'zipCode' => $this->getAddress()->getZipCode(),
+                'complement' => $this->getAddress()->getComplement(),
             ],
         ];
     }

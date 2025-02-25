@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Tests\Unit\Modules\_Common\Infrastructure;
+namespace Tests\Unit\Core\_Common\Infrastructure;
 
-use App\Modules\_Common\Domain\VO\UuidV4;
-use App\Modules\_Common\Infrastructure\UuidGenerator;
+use App\Core\_Common\Domain\VO\UuidV4;
+use App\Core\_Common\Infrastructure\UuidGenerator;
 use PHPUnit\Framework\Attributes\Test;
 use PHPUnit\Framework\TestCase;
 

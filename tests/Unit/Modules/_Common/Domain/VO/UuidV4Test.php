@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Tests\Unit\Modules\_Common\Domain\VO;
+namespace Tests\Unit\Core\_Common\Domain\VO;
 
-use App\Modules\_Common\Domain\VO\UuidV4;
+use App\Core\_Common\Domain\VO\UuidV4;
 use DomainException;
 use Iterator;
 use PHPUnit\Framework\Attributes\DataProvider;

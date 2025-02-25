@@ -2,17 +2,18 @@
 
 declare(strict_types=1);
 
-namespace App\Core\_Common\Infrastructure;
+namespace App\Core\Dojo\Infrastructure\Providers;
 
-use App\Core\_Common\Domain\IUuidGenerator;
+use App\Core\Dojo\Application\IDojoRepository;
+use App\Core\Dojo\Infrastructure\DojoRepository;
 use Illuminate\Support\ServiceProvider;
 
-class CommonServiceProvider extends ServiceProvider
+class DojoServiceProvider extends ServiceProvider
 {
     public function register(): void
     {
         $bindings = [
-            IUuidGenerator::class => UuidGenerator::class,
+            IDojoRepository::class => DojoRepository::class,
         ];
         foreach ($bindings as $abstract => $concrete) {
             $this->app->bind($abstract, $concrete);

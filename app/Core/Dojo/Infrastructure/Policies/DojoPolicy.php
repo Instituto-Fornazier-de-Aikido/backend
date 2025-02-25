@@ -12,17 +12,38 @@ class DojoPolicy
 {
     use HandlesAuthorization;
 
-    public function viewAny(User $user): bool {}
+    public function viewAny(User $user): bool
+    {
+        return $user->tokenCan('dojo:viewAny');
+    }
 
-    public function view(User $user, Dojo $dojo): bool {}
+    public function view(User $user, Dojo $dojo): bool
+    {
+        return $user->tokenCan('dojo:view') || $user->tokenCan('dojo:viewAny');
+    }
 
-    public function create(User $user): bool {}
+    public function create(User $user): bool
+    {
+        return $user->tokenCan('dojo:create');
+    }
 
-    public function update(User $user, Dojo $dojo): bool {}
+    public function update(User $user, Dojo $dojo): bool
+    {
+        return $user->tokenCan('dojo:update');
+    }
 
-    public function delete(User $user, Dojo $dojo): bool {}
+    public function delete(User $user, Dojo $dojo): bool
+    {
+        return $user->tokenCan('dojo:delete');
+    }
 
-    public function restore(User $user, Dojo $dojo): bool {}
+    public function restore(User $user, Dojo $dojo): bool
+    {
+        return $user->tokenCan('dojo:restore');
+    }
 
-    public function forceDelete(User $user, Dojo $dojo): bool {}
+    public function forceDelete(User $user, Dojo $dojo): bool
+    {
+        return $user->tokenCan('dojo:forceDelete');
+    }
 }

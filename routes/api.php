@@ -21,8 +21,8 @@ Route::name('Dojos - ')
     ->middleware('auth:api')
     ->group(function (): void {
         Route::get('/', 'index')->name('List');
-        Route::get('/{uuid}', 'show')->name('Show');
+        Route::get('/{dojo}', 'show')->name('Show');
         Route::post('/', 'store')->name('Create');
-        Route::put('/{uuid}', 'update')->name('Update');
-        Route::delete('/{uuid}', 'destroy')->name('Delete');
+        Route::put('/{dojo}', 'update')->name('Update');
+        Route::delete('/{dojo}', 'destroy')->name('Delete');
     });

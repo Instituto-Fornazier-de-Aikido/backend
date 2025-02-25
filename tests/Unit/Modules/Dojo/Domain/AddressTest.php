@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Tests\Unit\Modules\Dojo\Domain;
+namespace Tests\Unit\Core\Dojo\Domain;
 
-use App\Modules\_Common\Domain\VO\BrazilianStateAcronym;
-use App\Modules\_Common\Domain\VO\BrazilianZipCode;
-use App\Modules\Dojo\Domain\Address;
+use App\Core\_Common\Domain\VO\BrazilianStateAcronym;
+use App\Core\_Common\Domain\VO\BrazilianZipCode;
+use App\Core\Dojo\Domain\Address;
 use Faker\Factory;
 use Iterator;
 use PHPUnit\Framework\Attributes\DataProvider;
